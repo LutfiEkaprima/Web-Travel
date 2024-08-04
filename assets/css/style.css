@@ -1,0 +1,17 @@
+body {
+    background-color: #1b1b1b;
+    color: white;
+  }
+  .navbar-custom {
+    background-color: #495663;
+  }
+  .nav-link {
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .nav-link.active {
+    color: white;
+    border-bottom: 2px solid white;
+  }
