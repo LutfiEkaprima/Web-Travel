@@ -1,17 +1,43 @@
 body {
     background-color: #1b1b1b;
     color: white;
-  }
-  .navbar-custom {
-    background-color: #495663;
-  }
-  .nav-link {
+}
+
+.navbar-custom {
+    background-color: #778da2;
+}
+
+.nav-link {
     color: rgba(255, 255, 255, 0.55);
-  }
-  .nav-link:hover {
+}
+
+.nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
-  }
-  .nav-link.active {
+}
+
+.nav-link.active {
     color: white;
     border-bottom: 2px solid white;
-  }
+}
+
+.hero-section {
+    background-image: url('../gallery/jamgadang.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+}
+
+.text-hero{
+    background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 40px; 
+    border-radius: 10px; 
+}
+
+footer {
+    background-color: #343a40; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    padding: 20px 0; /* Padding atas dan bawah footer */
+}

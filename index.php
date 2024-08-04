@@ -17,12 +17,10 @@
         <div class="container-fluid">
             
             <!-- Logo -->
-            <div class="d-flex align-items-center">
-                <a class="navbar-brand text-white" href="#">
-                    <img src="./assets/icon.png" alt="Jam Gadang" width="50" height="50">
-                </a>
-                <p class="fw-bold mb-0 ms-2 fs-2">Jam Gadang</p>
-            </div>
+            <a class="navbar-brand text-white d-flex align-items-center" href="#">
+                <img src="./assets/icon.png" alt="Jam Gadang" width="50" height="50">
+                <p class="fw-bold mb-0 ms-2 fs-2">JAM GADANG</p>
+            </a>
             <!-- End Logo -->
 
             <!-- Responsive Bar -->
@@ -38,19 +36,19 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item me-3">
+                    <li class="nav-item me-3 fs-5">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item me-3">
+                    <li class="nav-item me-3 fs-5">
                         <a class="nav-link" href="#">About</a>
                     </li>
-                    <li class="nav-item me-3">
+                    <li class="nav-item me-3 fs-5">
                         <a class="nav-link" href="#">Destinasi</a>
                     </li>
-                    <li class="nav-item me-3">
+                    <li class="nav-item me-3 fs-5">
                         <a class="nav-link" href="#">Galery</a>
                     </li>
-                    <li class="nav-item me-3">
+                    <li class="nav-item me-3 fs-5">
                         <a class="nav-link" href="#">Order</a>
                     </li>
                 </ul>
@@ -67,25 +65,74 @@
 
     <!-- Heroes  -->
 
-    <div class="d-flex vh-100">
-        <div class="container my-auto">
-            <div class="text-center">
-                <h1 class="display-5 fw-bold text-body-emphasis">JAM GADANG</h1>
-                <div class="col-lg-6 mx-auto">
-                    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+    <section class="hero-section">
+        <div class="d-flex vh-100">
+            <div class="container my-auto">
+                <div class="text-hero text-center">
+                    <h1 class="display-5 fw-bold">JAM GADANG</h1>
+                    <div class="col-lg-6 mx-auto">
+                        <p class="lead mb-4 fw-semibold">
+                            Jam Gadang adalah sebuah ikon kota Bukittinggi, Sumatera Barat, Indonesia. 
+                            Jam ini dibangun oleh Belanda pada tahun 1926 sebagai hadiah ulang tahun Ratu Wilhelmina dari Belanda yang ke-25. 
+                            Jam Gadang memiliki tinggi 26 meter dan berat 60 ton.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="hero-section">
+        <div class="d-flex vh-100">
+            <div class="container my-auto">
+                <div class="text-hero text-center">
+                    <h1 class="display-5 fw-bold">JAM GADANG</h1>
+                    <div class="col-lg-6 mx-auto">
+                        <p class="lead mb-4 fw-semibold">
+                            Jam Gadang adalah sebuah ikon kota Bukittinggi, Sumatera Barat, Indonesia. 
+                            Jam ini dibangun oleh Belanda pada tahun 1926 sebagai hadiah ulang tahun Ratu Wilhelmina dari Belanda yang ke-25. 
+                            Jam Gadang memiliki tinggi 26 meter dan berat 60 ton.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-section">
+        <div class="d-flex vh-100">
+            <div class="container my-auto">
+                <div class="text-hero text-center">
+                    <h1 class="display-5 fw-bold">JAM GADANG</h1>
+                    <div class="col-lg-6 mx-auto">
+                        <p class="lead mb-4 fw-semibold">
+                            Jam Gadang adalah sebuah ikon kota Bukittinggi, Sumatera Barat, Indonesia. 
+                            Jam ini dibangun oleh Belanda pada tahun 1926 sebagai hadiah ulang tahun Ratu Wilhelmina dari Belanda yang ke-25. 
+                            Jam Gadang memiliki tinggi 26 meter dan berat 60 ton.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- End Heroes -->
 
     
     <!-- End Main Content -->
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2024 JAM GADANG TOUR. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="#" class="text-white">Facebook</a> |
+                <a href="#" class="text-white">Twitter</a> |
+                <a href="#" class="text-white">Instagram</a>
+            </p>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
