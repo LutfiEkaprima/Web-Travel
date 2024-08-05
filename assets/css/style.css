@@ -1,5 +1,6 @@
+/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 * {
     margin: 0;
@@ -50,7 +51,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        height: 50vh;
+        width: auto;
     }
 }
 
@@ -60,12 +61,77 @@ body {
     font-style: normal;
 }
 
+.about-section, .destinasi-section, .paketwisata-section, .galery-section {
+    height: 100vh;
+}
+
 .about-section {
     background-color: #0080ff;
 }
 
-footer {
-    background-color: #343a40;
-    color: white;
+.destinasi-section {
+    background-color: #2aff95;
+}
+
+/* Other existing styles... */
+
+.carousel-item .row {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-image: none;
+}
+
+.carousel-control-prev-icon:after, .carousel-control-next-icon:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../gallery/button/arrow-left-short.svg');
+    background-size: 25px 25px;
+}
+
+.carousel-control-next-icon:after {
+    width: 20px;
+    height: 20px;
+    background: url('../gallery/button/arrow-right-short.svg');
+    background-size: 25px 25px;
+}
+
+@media (max-width: 768px) {
+    .carousel-item .col-md-4 {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel-item .col-md-4 {
+        max-width: 30%;
+    }
+}
+
+.paketwisata-section {
+    background-color: #ff0080;
+}
+
+.galery-section {
+    background-color: #ff8000;
+}
+
+.footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 20px 0;
 }
