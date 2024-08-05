@@ -15,11 +15,11 @@
     <nav class="navbar navbar-expand-md navbar-custom fixed-top">
 
         <div class="container-fluid">
-            
+
             <!-- Logo -->
             <a class="navbar-brand text-white d-flex align-items-center" href="#">
                 <img src="./assets/icon.png" alt="Jam Gadang" width="50" height="50">
-                <p class="fw-bold mb-0 ms-2 fs-2">JAM GADANG</p>
+                <p class="fw-bold mb-0 ms-2 fs-2 text-black" >JAM GADANG</p>
             </a>
             <!-- End Logo -->
 
@@ -40,7 +40,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item me-3 fs-5">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item me-3 fs-5">
                         <a class="nav-link" href="#">Destinasi</a>
@@ -61,56 +61,20 @@
 
     <!-- End Nav Bar -->
 
+    <!-- ====================================== -->
     <!-- Main Content -->
 
     <!-- Heroes  -->
 
     <section class="hero-section">
+        <video autoplay muted loop class="video-background">
+            <source src="./assets/gallery/Wonderful Indonesia - Magnificent Minangkabau  Sumatera Barat (TVC).mp4" type="video/mp4">
+            https://youtu.be/kX-yZtVd5Sg?si=xskQnCRSbMfA1mCc
+        </video>
         <div class="d-flex vh-100">
             <div class="container my-auto">
                 <div class="text-hero text-center">
-                    <h1 class="display-5 fw-bold">JAM GADANG</h1>
-                    <div class="col-lg-6 mx-auto">
-                        <p class="lead mb-4 fw-semibold">
-                            Jam Gadang adalah sebuah ikon kota Bukittinggi, Sumatera Barat, Indonesia. 
-                            Jam ini dibangun oleh Belanda pada tahun 1926 sebagai hadiah ulang tahun Ratu Wilhelmina dari Belanda yang ke-25. 
-                            Jam Gadang memiliki tinggi 26 meter dan berat 60 ton.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="hero-section">
-        <div class="d-flex vh-100">
-            <div class="container my-auto">
-                <div class="text-hero text-center">
-                    <h1 class="display-5 fw-bold">JAM GADANG</h1>
-                    <div class="col-lg-6 mx-auto">
-                        <p class="lead mb-4 fw-semibold">
-                            Jam Gadang adalah sebuah ikon kota Bukittinggi, Sumatera Barat, Indonesia. 
-                            Jam ini dibangun oleh Belanda pada tahun 1926 sebagai hadiah ulang tahun Ratu Wilhelmina dari Belanda yang ke-25. 
-                            Jam Gadang memiliki tinggi 26 meter dan berat 60 ton.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="hero-section">
-        <div class="d-flex vh-100">
-            <div class="container my-auto">
-                <div class="text-hero text-center">
-                    <h1 class="display-5 fw-bold">JAM GADANG</h1>
-                    <div class="col-lg-6 mx-auto">
-                        <p class="lead mb-4 fw-semibold">
-                            Jam Gadang adalah sebuah ikon kota Bukittinggi, Sumatera Barat, Indonesia. 
-                            Jam ini dibangun oleh Belanda pada tahun 1926 sebagai hadiah ulang tahun Ratu Wilhelmina dari Belanda yang ke-25. 
-                            Jam Gadang memiliki tinggi 26 meter dan berat 60 ton.
-                        </p>
-                    </div>
+                    <h1 class="display-5 fw-bold">SUMATERA BARAT</h1>
                 </div>
             </div>
         </div>
@@ -118,9 +82,30 @@
 
     <!-- End Heroes -->
 
-    
-    <!-- End Main Content -->
+    <!-- About -->
 
+    <section class="about-section" id="about">
+        <div class="d-flex vh-100">
+            <div class="container my-auto">
+                <div class="text-about text-center">
+                    <h1 class="display-5 fw-bold">About Sumatera Barat</h1>
+                    <div class="col-lg-6 mx-auto">
+                        <p class="lead mb-4 fw-light">
+                            <br><br>
+                            Sumatera Barat adalah sebuah provinsi di Indonesia yang terletak di Pulau Sumatra dengan ibu kota Padang, dan juga
+                            merupakan rumah bagi etnis Minangkabau dan Mentawai.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About -->
+
+
+    <!-- End Main Content -->
+    <!-- ====================================== -->
     <!-- Footer -->
     <footer class="text-center">
         <div class="container">
