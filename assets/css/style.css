@@ -48,20 +48,24 @@ body {
     z-index: -1;
 }
 
-.text-hero h1{
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+    }
+}
+
+.text-hero h1 {
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
 }
 
-.about-section{
+.about-section {
     background-color: #0080ff;
-
 }
 
-
 footer {
-    background-color: #343a40; 
-    color: white; 
+    background-color: #343a40;
+    color: white;
     padding: 20px 0;
 }
