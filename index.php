@@ -94,7 +94,7 @@
 
     <!-- Destinasi Wisata -->
     <section class="destinasi-section" id="destinasi">
-        <div class="container d-flex flex-column justify-content-center align-items-center vh-100 position-relative">
+        <div class="destinasi-carousel container d-flex flex-column align-items-center vh-100 position-relative">
             <div class="text-center mb-4">
                 <h1 class="display-5 fw-bold">Destinasi Wisata</h1>
             </div>
@@ -102,73 +102,58 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row justify-content-center">
-                            <div class="col-md-4">
+                            <div class="col-12 col-md-4 mb-3">
                                 <div class="card h-100">
                                     <img src="assets/gallery/jamgadang.jpg" class="card-img-top" alt="Destinasi 1">
                                     <div class="card-body">
                                         <h5 class="card-title">Jam Gadang</h5>
-                                        <p class="card-text">Jam Gadang adalah menara jam yang menjadi penanda atau ikon Kota Bukittinggi,
-                                            Sumatera Barat, Indonesia. Menara jam ini menjulang setinggi 27 meter dan diresmikan pembangunannya pada 25 Juli 1927.
-                                            Terdapat jam berukuran besar berdiameter 80 cm di empat sisi menara sehingga dinamakan Jam Gadang,
-                                            sebutan bahasa Minangkabau yang berarti "jam besar".
-
-                                        </p>
+                                        <p class="card-text">Jam Gadang adalah menara jam yang menjadi penanda atau ikon Kota Bukittinggi, Sumatera Barat, Indonesia. Menara jam ini menjulang setinggi 27 meter dan diresmikan pembangunannya pada 25 Juli 1927. Terdapat jam berukuran besar berdiameter 80 cm di empat sisi menara sehingga dinamakan Jam Gadang, sebutan bahasa Minangkabau yang berarti "jam besar".</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-12 col-md-4 mb-3">
                                 <div class="card h-100">
                                     <img src="assets/gallery/Harau.jpg" class="card-img-top" alt="Destinasi 2">
                                     <div class="card-body">
                                         <h5 class="card-title">Lembah Harau</h5>
-                                        <p class="card-text">Lembah Harau adalah sebuah ngarai dekat Kota Payakumbuh di Kabupaten Limapuluh Koto, provinsi Sumatera Barat.
-                                            Lembah Harau diapit dua bukit cadas terjal dengan ketinggian mencapai 150 meter berupa batu pasir yang terjal berwarna-warni,
-                                            dengan ketinggian 100 sampai 500 meter.</p>
+                                        <p class="card-text">Lembah Harau adalah sebuah ngarai dekat Kota Payakumbuh di Kabupaten Limapuluh Koto, provinsi Sumatera Barat. Lembah Harau diapit dua bukit cadas terjal dengan ketinggian mencapai 150 meter berupa batu pasir yang terjal berwarna-warni, dengan ketinggian 100 sampai 500 meter.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-12 col-md-4 mb-3">
                                 <div class="card h-100">
                                     <img src="assets/gallery/lembahanai.jpg" class="card-img-top" alt="Destinasi 3">
                                     <div class="card-body">
                                         <h5 class="card-title">Air Terjun Lembah Anai</h5>
-                                        <p class="card-text">Air Terjun Lembah Anai adalah sebuah air terjun yang terletak di jorong aie mancua nagari Singgalang, X Koto, Kabupaten Tanah Datar, Sumatera Barat.
-                                            Air terjun setinggi sekira 35 meter ini berada tepat di tepi Jalan Raya Padang-Bukittinggi di kaki Gunung Singgalang.
-                                            Air Terjun Lembah Anai merupakan bagian dari aliran Sungai Batang Lurah, anak Sungai Batang Anai yang berhulu di Gunung Singgalang di ketinggian 400 Mdpl.</p>
+                                        <p class="card-text">Air Terjun Lembah Anai adalah sebuah air terjun yang terletak di jorong aie mancua nagari Singgalang, X Koto, Kabupaten Tanah Datar, Sumatera Barat. Air terjun setinggi sekira 35 meter ini berada tepat di tepi Jalan Raya Padang-Bukittinggi di kaki Gunung Singgalang. Air Terjun Lembah Anai merupakan bagian dari aliran Sungai Batang Lurah, anak Sungai Batang Anai yang berhulu di Gunung Singgalang di ketinggian 400 Mdpl.</p>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="row justify-content-center">
-                            <div class="col-md-4">
+                            <div class="col-12 col-md-4 mb-3">
                                 <div class="card h-100">
                                     <img src="assets/gallery/ngarai-sianok.jpg" class="card-img-top" alt="Destinasi 1">
                                     <div class="card-body">
                                         <h5 class="card-title">Ngarai Sianok</h5>
-                                        <p class="card-text">Ngarai Sianok merupakan sebuah lembah curam yang terletak di perbatasan Kota Bukittinggi, di Kecamatan IV Koto, Kabupaten Agam, Sumatera Barat.
-                                            Lembah ini memanjang dan berkelok sebagai garis batas kota dari selatan Ngarai Koto Gadang sampai ke nagari Sianok Anam Suku, dan berakhir di Kecamatan Palupuh.
-                                            Ngarai Sianok memiliki pemandangan yang sangat indah dan juga menjadi salah satu objek wisata yang paling sering dikunjungi.</p>
+                                        <p class="card-text">Ngarai Sianok merupakan sebuah lembah curam yang terletak di perbatasan Kota Bukittinggi, di Kecamatan IV Koto, Kabupaten Agam, Sumatera Barat. Lembah ini memanjang dan berkelok sebagai garis batas kota dari selatan Ngarai Koto Gadang sampai ke nagari Sianok Anam Suku, dan berakhir di Kecamatan Palupuh. Ngarai Sianok memiliki pemandangan yang sangat indah dan juga menjadi salah satu objek wisata yang paling sering dikunjungi.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-12 col-md-4 mb-3">
                                 <div class="card h-100">
                                     <img src="assets/gallery/Istana-Basa-Pagaruyung.jpg" class="card-img-top" alt="Destinasi 2">
                                     <div class="card-body">
                                         <h5 class="card-title">Istana Basa Pagaruyung</h5>
-                                        <p class="card-text">Istano Basa Pagaruyung yang lebih terkenal dengan nama Istana Besar Kerajaan Pagaruyung adalah museum berupa replika istana Kerajaan Pagaruyung terletak di Nagari Pagaruyung, Kecamatan Tanjung Emas, Kabupaten Tanah Datar, Sumatera Barat.
-                                            Istana ini berjarak lebih kurang 5 kilometer dari Batusangkar.
-                                            Istana ini merupakan objek wisata budaya yang terkenal di Sumatera Barat.</p>
+                                        <p class="card-text">Istano Basa Pagaruyung yang lebih terkenal dengan nama Istana Besar Kerajaan Pagaruyung adalah museum berupa replika istana Kerajaan Pagaruyung terletak di Nagari Pagaruyung, Kecamatan Tanjung Emas, Kabupaten Tanah Datar, Sumatera Barat. Istana ini berjarak lebih kurang 5 kilometer dari Batusangkar. Istana ini merupakan objek wisata budaya yang terkenal di Sumatera Barat.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Buttons outside carousel-inner -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinasi" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -191,8 +176,8 @@
                 <h1 class="display-5 fw-bold">Paket Wisata</h1>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center fw-bold">Paket Wisata Small</h5>
                             <p class="card-text fw-light">Paket ini cocok untuk kelompok kecil yang terdiri dari 3 hingga 5 orang. Ideal untuk liburan singkat atau perjalanan santai bersama teman atau keluarga dengan total 3 destinasi objek Wisata.</p>
@@ -208,8 +193,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center fw-bold">Paket Wisata Medium</h5>
                             <p class="card-text fw-light">Paket ini dirancang untuk kelompok menengah, dengan kapasitas 6 hingga 10 orang. Cocok untuk keluarga besar atau kelompok teman yang ingin menjelajahi lebih banyak tempat wisata dengan total 5 destinasi objek Wisata.</p>
@@ -226,20 +211,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center fw-bold">Paket Wisata Large</h5>
-                            <p class="card-text fw-light">Paket ini ideal untuk kelompok besar antara 11 hingga 20 orang. Perfect untuk acara corporate, outing sekolah, atau reuni keluarga besar dengan total 7 destinasi objek Wisata.</p>
+                            <p class="card-text fw-light">Paket ini ditujukan untuk kelompok besar, mulai dari 11 hingga 20 orang. Ideal untuk rombongan wisata, acara kantor, atau grup besar lainnya yang ingin pengalaman wisata lengkap dan mendalam dengan total 10 destinasi objek Wisata.</p>
                             <ul>
-                                <li>Transportasi bus atau minibus</li>
+                                <li>Transportasi bus pariwisata</li>
                                 <li>Akomodasi di hotel bintang 5</li>
                                 <li>Makanan 3 kali sehari (sarapan, makan siang, makan malam)</li>
-                                <li>Pemandu wisata pribadi</li>
-                                <li>Tiket masuk ke berbagai objek wisata utama dan aktivitas khusus</li>
-                                <li>Aktivitas lainnya</li>
+                                <li>Tiket masuk ke banyak objek wisata utama</li>
+                                <li>Aktivitas tambahan eksklusif (seperti spa, golf, atau tur khusus)</li>
+                                <li>Pemandu wisata berlisensi</li>
                             </ul>
-                            <h6>Harga: Rp 12.000.000 per grup</h6><br>
+                            <h6>Harga: Rp 15.000.000</h6><br>
                             <p>Note : <br></p>
                             <h6>Harga per orang (jika lebih dari 20 orang): Rp 800.000 per orang</h6>
                         </div>
@@ -248,6 +233,7 @@
             </div>
         </div>
     </section>
+
     <!-- End Paket Wisata -->
 
     <!-- Galery -->
@@ -282,8 +268,8 @@
     <!-- Footer -->
     <footer class="text-center mt-3 mb-3">
         <div class="container">
-            <p class="text-black" >&copy; 2024 JAM GADANG TOUR. All rights reserved.</p>
-            <p class="text-black" >Follow us on:
+            <p class="text-black">&copy; 2024 JAM GADANG TOUR. All rights reserved.</p>
+            <p class="text-black">Follow us on:
                 <a href="#" class="text-black">Facebook</a> |
                 <a href="#" class="text-black">Twitter</a> |
                 <a href="#" class="text-black">Instagram</a>
@@ -300,7 +286,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
-    
+
     <!-- End Script -->
 
 </body>
