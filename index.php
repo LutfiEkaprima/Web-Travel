@@ -1,5 +1,7 @@
 <?php
+session_start();
 include 'db.php';
+$user_id = isset($_GET['user_id']) ? $_GET['user_id'] : null;
 ?>
 <!doctype html>
 <html lang="en">
@@ -8,7 +10,7 @@ include 'db.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JAM GADANG TOUR</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="assets/js/script.js"></script>
 </head>
@@ -49,9 +51,25 @@ include 'db.php';
                     <li class="nav-item me-3 fs-5">
                         <a class="nav-link" id="nav-galery" href="#galery">Galery</a>
                     </li>
-                    <li class="nav-item me-3 fs-5">
-                        <a class="nav-link" id="nav-login" href="#">Login</a>
-                    </li>
+                    <?php if (isset($_SESSION['user'])) : ?>
+                        <li class="nav-item dropdown me-3 fs-5">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?php echo htmlspecialchars($_SESSION['user']['nama']);?>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <?php if ($_SESSION['user']['role'] === 'admin') : ?>
+                                    <li><a class="dropdown-item" href="admin/admin.php">Admin Zone</a></li>
+                                <?php else : ?>
+                                    <li><a class="dropdown-item" href="users/users.php?user_id=<?php echo $user_id ?>">Client Zone</a>
+                                <?php endif; ?>
+                                <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item me-3 fs-5">
+                            <a class="nav-link" id="nav-login" href="#loginModal" data-bs-toggle="modal">Login</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <!-- End Nav Bar Items -->
@@ -236,15 +254,73 @@ include 'db.php';
     </footer>
     <!-- End Footer -->
 
+    <!-- Login Modal -->
+    <div class="modal fade text-black" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="login.php" method="post">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <div class="mt-3 text-center">
+                        <p>Don't have an account? <a href="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login Modal -->
+
+    <!-- Registration Modal -->
+    <div class="modal fade text-black" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="register.php" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="nama" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Registration Modal -->
+
     <!-- End Main Content -->
 
     <!-- Script -->
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
-
     <!-- End Script -->
 
 </body>

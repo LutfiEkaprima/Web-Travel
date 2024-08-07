@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAM GADANG TOUR - ADMIN</title>
     <link rel="stylesheet" href="assets/style.css" />
-    <!-- Include Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <div class="app">
@@ -25,13 +24,13 @@
                 <a href="kelola_destinasi_wisata.php" class="menu-item">Kelola Destinasi Wisata</a>
                 <a href="kelola_paketwisata.php" class="menu-item">Kelola Paket Wisata</a>
                 <a href="#" class="menu-item is-active">Kelola Galery</a>
-                <a href="#" class="menu-item">Log Out</a>
+                <a href="../logout.php" class="menu-item">Log Out</a>
             </nav>
         </aside>
 
         <main class="content">
             <h1>Kelola Galery</h1>
-            <p>Manage your gallery images here. You can add, edit, or delete images.</p>
+            <p>Kelola Foto untuk Galery Halaman Website</p>
 
             <form action="upload_galery.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
@@ -45,25 +44,21 @@
             <table class="table table-bordered mt-3">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Image</th>
-                        <th>Actions</th>
+                        <th>Foto</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     include '../db.php';
                     
-                    // Fetch gallery images from database
                     $query = "SELECT * FROM galery";
                     $stmt = $pdo->prepare($query);
                     $stmt->execute();
                     $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     
-                    // Display each image
                     foreach ($images as $image) {
                         echo '<tr>
-                            <td>' . htmlspecialchars($image['id']) . '</td>
                             <td><img src="../assets/gallery/carousel/' . htmlspecialchars($image['foto']) . '" alt="Gallery Image" height="100" width="100"></td>
                             <td>
                                 <a href="delete_galery.php?id=' . htmlspecialchars($image['id']) . '" class="btn btn-danger btn-sm">Delete</a>
@@ -76,9 +71,9 @@
         </main>
     </div>
 
-    <!-- Include Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
 </body>
 </html>

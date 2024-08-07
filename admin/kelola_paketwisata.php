@@ -40,54 +40,7 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAM GADANG TOUR - ADMIN</title>
     <link rel="stylesheet" href="assets/style.css" />
-    <style>
-        /* Tambahkan styling khusus untuk tabel dan formulir */
-        .content table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        .content th, .content td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        .content th {
-            background-color: #f4f4f4;
-            color: #3C3F58;
-        }
-        .content tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .content tr:hover {
-            background-color: #f1f1f1;
-        }
-        .form-container {
-            margin: 20px 0;
-        }
-        .form-container form {
-            display: flex;
-            flex-direction: column;
-        }
-        .form-container form input,
-        .form-container form textarea {
-            margin-bottom: 1rem;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .form-container form button {
-            padding: 0.75rem;
-            background-color: #3bba9c;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .form-container form button:hover {
-            background-color: #34a892;
-        }
-    </style>
+    
 </head>
 <body>
     <div class="app">
@@ -104,7 +57,7 @@ if (isset($_GET['id'])) {
                 <a href="kelola_destinasi_wisata.php" class="menu-item">Kelola Destinasi Wisata</a>
                 <a href="#" class="menu-item is-active">Kelola Paket Wisata</a>
                 <a href="kelola_galery.php" class="menu-item">Kelola Galery</a>
-                <a href="#" class="menu-item">Log Out</a>
+                <a href="../logout.php" class="menu-item">Log Out</a>
             </nav>
         </aside>
 
@@ -147,15 +100,13 @@ if (isset($_GET['id'])) {
                 </thead>
                 <tbody>
                     <?php
-                    include '../db.php'; // Menghubungkan ke database
+                    include '../db.php';
 
-                    // Query untuk mengambil data paket wisata
                     $sql = "SELECT * FROM paket_wisata";
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute();
                     $paket_wisata = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    // Menampilkan data dalam tabel HTML
                     foreach ($paket_wisata as $paket) {
                         echo "<tr>
                                 <td>{$paket['id']}</td>

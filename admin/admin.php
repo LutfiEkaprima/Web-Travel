@@ -25,7 +25,7 @@
                 <a href="kelola_destinasi_wisata.php" class="menu-item">Kelola Destinasi Wisata</a>
                 <a href="kelola_paketwisata.php" class="menu-item">Kelola Paket Wisata</a>
                 <a href="kelola_galery.php" class="menu-item">Kelola Galery</a>
-                <a href="#" class="menu-item">Log Out</a>
+                <a href="../logout.php" class="menu-item">Log Out</a>
             </nav>
         </aside>
 
@@ -35,7 +35,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nama Pelanggan</th>
+                        <th>Nama Pemesan</th>
                         <th>Paket Wisata</th>
                         <th>Tambahan Orang</th>
                         <th>Total Pembayaran</th>
@@ -43,26 +43,24 @@
                 </thead>
                 <tbody>
                     <?php
-                    include '../db.php'; // Menghubungkan ke database
+                    include '../db.php';
 
-                    // Query untuk mengambil data pesanan
                     $sql = "SELECT ps.id, u.nama AS nama_pelanggan, pw.nama_paket, ps.tambahan_orang, ps.total_pembayaran
-        FROM pesanan ps
-        JOIN user u ON ps.id_user = u.id
-        JOIN paket_wisata pw ON ps.id_paket_wisata = pw.id";
+                        FROM pesanan ps
+                        JOIN user u ON ps.id_user = u.id
+                        JOIN paket_wisata pw ON ps.id_paket_wisata = pw.id";
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute();
                     $pesanan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    // Menampilkan data dalam tabel HTML
                     foreach ($pesanan as $pesan) {
                         echo "<tr>
-            <td>{$pesan['id']}</td>
-            <td>{$pesan['nama_pelanggan']}</td>
-            <td>{$pesan['nama_paket']}</td>
-            <td>{$pesan['tambahan_orang']}</td>
-            <td>{$pesan['total_pembayaran']}</td>
-          </tr>";
+                            <td>{$pesan['id']}</td>
+                            <td>{$pesan['nama_pelanggan']}</td>
+                            <td>{$pesan['nama_paket']}</td>
+                            <td>{$pesan['tambahan_orang']}</td>
+                            <td>{$pesan['total_pembayaran']}</td>
+                        </tr>";
                     }
                     ?>
 
