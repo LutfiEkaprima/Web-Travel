@@ -18,13 +18,11 @@ if (!$destinasi) {
     exit;
 }
 
-// Proses form
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $judul = $_POST['judul'];
     $keterangan = $_POST['keterangan'];
 
-    // Proses upload foto
-    $foto = $destinasi['foto']; // tetap gunakan foto lama jika tidak ada upload foto baru
+    $foto = $destinasi['foto'];
     if ($_FILES['foto']['error'] === UPLOAD_ERR_OK) {
         $foto = $_FILES['foto']['name'];
         $tempName = $_FILES['foto']['tmp_name'];
@@ -32,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $uploadFile = $uploadDir . basename($foto);
 
         if (move_uploaded_file($tempName, $uploadFile)) {
-            // Hapus foto lama
             if (file_exists($uploadDir . $destinasi['foto'])) {
                 unlink($uploadDir . $destinasi['foto']);
             }

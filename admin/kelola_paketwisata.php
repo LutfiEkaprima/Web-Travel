@@ -1,15 +1,13 @@
 <?php
-include '../db.php'; // Menghubungkan ke database
+include '../db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
-    // Ambil data dari formulir
     $id = $_POST['id'];
     $nama_paket = $_POST['nama_paket'];
     $deskripsi = $_POST['deskripsi'];
     $harga = $_POST['harga'];
     $harga_per_orang = $_POST['harga_per_orang'];
 
-    // Update query
     $sql = "UPDATE paket_wisata SET nama_paket = :nama_paket, deskripsi = :deskripsi, harga = :harga, harga_per_orang = :harga_per_orang WHERE id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':id', $id);
@@ -20,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
     $stmt->execute();
 }
 
-// Jika ada ID yang diset di URL, ambil data paket untuk diedit
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "SELECT * FROM paket_wisata WHERE id = :id";
@@ -29,6 +26,11 @@ if (isset($_GET['id'])) {
     $stmt->execute();
     $package = $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+function formatRupiah($amount) {
+    return "Rp " . number_format($amount, 0, ',', '.');
+}
+
 ?>
 
 
@@ -86,7 +88,6 @@ if (isset($_GET['id'])) {
                 </form>
             </div>
 
-            <!-- Tabel untuk menampilkan paket wisata -->
             <table>
                 <thead>
                     <tr>
@@ -112,8 +113,8 @@ if (isset($_GET['id'])) {
                                 <td>{$paket['id']}</td>
                                 <td>{$paket['nama_paket']}</td>
                                 <td>{$paket['deskripsi']}</td>
-                                <td>{$paket['harga']}</td>
-                                <td>{$paket['harga_per_orang']}</td>
+                                <td>" . formatRupiah($paket['harga']) . "</td>
+                                <td>" . formatRupiah($paket['harga_per_orang']) . "</td>
                                 <td>
                                     <a href='kelola_paketwisata.php?id={$paket['id']}' class='btn-edit'>Edit</a>
                                 </td>

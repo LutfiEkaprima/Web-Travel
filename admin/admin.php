@@ -1,3 +1,9 @@
+<?php
+function formatRupiah($amount) {
+    return "Rp " . number_format($amount, 0, ',', '.');
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +65,7 @@
                             <td>{$pesan['nama_pelanggan']}</td>
                             <td>{$pesan['nama_paket']}</td>
                             <td>{$pesan['tambahan_orang']}</td>
-                            <td>{$pesan['total_pembayaran']}</td>
+                            <td>" . formatRupiah($pesan['total_pembayaran']) . "</td>
                         </tr>";
                     }
                     ?>

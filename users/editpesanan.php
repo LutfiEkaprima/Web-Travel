@@ -2,13 +2,11 @@
 session_start();
 include '../db.php';
 
-// Check if user is logged in
 if (!isset($_SESSION['user'])) {
     header('Location: ../index.php');
     exit();
 }
 
-// Check if user is of the correct role
 if ($_SESSION['user']['role'] !== 'user') {
     header('Location: ../index.php');
     exit();
@@ -16,7 +14,6 @@ if ($_SESSION['user']['role'] !== 'user') {
 
 $user_id = $_SESSION['user']['id'];
 
-// Fetch the order details
 if (isset($_GET['id'])) {
     $order_id = $_GET['id'];
     $stmt = $pdo->prepare("SELECT * FROM pesanan WHERE id = ? AND id_user = ?");
@@ -29,12 +26,10 @@ if (isset($_GET['id'])) {
     }
 }
 
-// Update the order details
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id_paket_wisata = $_POST['id_paket_wisata'];
     $tambahan_orang = $_POST['tambahan_orang'];
 
-    // Get paket wisata details from database
     $stmt = $pdo->prepare("SELECT harga, harga_per_orang, kapasitas_min, kapasitas_max FROM paket_wisata WHERE id = ?");
     $stmt->execute([$id_paket_wisata]);
     $paket_wisata = $stmt->fetch();
@@ -45,13 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $kapasitas_min = $paket_wisata['kapasitas_min'];
         $kapasitas_max = $paket_wisata['kapasitas_max'];
 
-        // Validate jumlah orang
         if ($tambahan_orang > $kapasitas_max) {
             echo "Jumlah tambahan orang melebihi kapasitas maksimum paket.";
             exit();
         }
 
-        // Calculate total pembayaran
         $total_pembayaran = $harga_paket + ($tambahan_orang * $harga_per_orang);
 
         $stmt = $pdo->prepare("UPDATE pesanan SET id_paket_wisata = ?, tambahan_orang = ?, total_pembayaran = ? WHERE id = ? AND id_user = ?");
@@ -128,7 +121,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             tambahanOrangInput.max = kapasitasMax;
         });
 
-        // Set the max value on page load
         window.onload = function() {
             var selectedOption = document.getElementById('id_paket_wisata').options[document.getElementById('id_paket_wisata').selectedIndex];
             var kapasitasMax = selectedOption.getAttribute('data-kapasitas-max');

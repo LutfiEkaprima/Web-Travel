@@ -2,13 +2,11 @@
 session_start();
 include '../db.php';
 
-// Check if user is logged in
 if (!isset($_SESSION['user'])) {
     header('Location: ../index.php');
     exit();
 }
 
-// Check if user is of the correct role
 if ($_SESSION['user']['role'] !== 'user') {
     header('Location: ../index.php');
     exit();

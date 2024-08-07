@@ -5,7 +5,6 @@ include 'db.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// Check user table
 $stmt = $pdo->prepare("SELECT * FROM user WHERE email = ?");
 $stmt->execute([$email]);
 $user = $stmt->fetch();
@@ -20,7 +19,6 @@ if ($user && password_verify($password, $user['password'])) {
     exit;
 }
 
-// Check admin table
 $stmt = $pdo->prepare("SELECT * FROM admin WHERE nama = ? AND password = ?");
 $stmt->execute([$email, $password]);
 $admin = $stmt->fetch();

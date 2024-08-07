@@ -2,12 +2,10 @@
 
 include '../db.php';
 
-// Proses form
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $judul = $_POST['judul'];
     $keterangan = $_POST['keterangan'];
 
-    // Proses upload foto
     if ($_FILES['foto']['error'] === UPLOAD_ERR_OK) {
         $foto = $_FILES['foto']['name'];
         $tempName = $_FILES['foto']['tmp_name'];

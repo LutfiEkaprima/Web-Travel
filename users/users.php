@@ -2,16 +2,18 @@
 session_start();
 include '../db.php';
 
-// Check if user is logged in
 if (!isset($_SESSION['user'])) {
     header('Location: ../index.php');
     exit();
 }
 
-// Check if user is of the correct role
 if ($_SESSION['user']['role'] !== 'user') {
     header('Location: ../index.php');
     exit();
+}
+
+function formatRupiah($amount) {
+    return "Rp " . number_format($amount, 0, ',', '.');
 }
 
 $user_id = $_SESSION['user']['id'];
@@ -49,7 +51,6 @@ $user_id = $_SESSION['user']['id'];
 
         <main class="content">
             <h1>Pesanan</h1>
-            <!-- Display Orders -->
             <section class="orders my-5">
                 <h2>Pesanan Saya</h2>
                 <table class="table table-striped">
@@ -69,7 +70,7 @@ $user_id = $_SESSION['user']['id'];
                             echo "<tr>";
                             echo "<td>{$row['nama_paket']}</td>";
                             echo "<td>{$row['tambahan_orang']}</td>";
-                            echo "<td>{$row['total_pembayaran']}</td>";
+                            echo "<td>" . formatRupiah($row['total_pembayaran']) . "</td>";
                             echo "<td><a href='editpesanan.php?id={$row['id']}' class='btn btn-primary btn-sm'>Edit</a> <a href='delete_order.php?id={$row['id']}' class='btn btn-danger btn-sm'>Hapus</a></td>";
                             echo "</tr>";
                         }

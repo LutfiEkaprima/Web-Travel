@@ -2,13 +2,11 @@
 session_start();
 include '../db.php';
 
-// Check if user is logged in
 if (!isset($_SESSION['user'])) {
     header('Location: ../index.php');
     exit();
 }
 
-// Check if user is of the correct role
 if ($_SESSION['user']['role'] !== 'user') {
     header('Location: ../index.php');
     exit();
@@ -20,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id_paket_wisata = $_POST['id_paket_wisata'];
     $tambahan_orang = $_POST['tambahan_orang'];
 
-    // Get paket wisata details from database
     $stmt = $pdo->prepare("SELECT harga, harga_per_orang, kapasitas_min, kapasitas_max FROM paket_wisata WHERE id = ?");
     $stmt->execute([$id_paket_wisata]);
     $paket_wisata = $stmt->fetch();
@@ -31,13 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $kapasitas_min = $paket_wisata['kapasitas_min'];
         $kapasitas_max = $paket_wisata['kapasitas_max'];
 
-        // Validate jumlah orang
         if ($tambahan_orang > $kapasitas_max) {
             echo "Jumlah tambahan orang melebihi kapasitas maksimum paket.";
             exit();
         }
 
-        // Calculate total pembayaran
         $total_pembayaran = $harga_paket + ($tambahan_orang * $harga_per_orang);
 
         $stmt = $pdo->prepare("INSERT INTO pesanan (id_user, id_paket_wisata, tambahan_orang, total_pembayaran) VALUES (?, ?, ?, ?)");

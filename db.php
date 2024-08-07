@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost'; // Ganti dengan host database Anda
-$dbname = 'web-travel';  // Nama database
-$username = 'root';  // Username database
-$password = '';      // Password database
+$host = 'localhost';
+$dbname = 'web-travel';
+$username = 'root';
+$password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
